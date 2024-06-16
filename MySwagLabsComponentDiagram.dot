@@ -1,0 +1,30 @@
+digraph MySwagLabsComponentDiagram {
+    rankdir=LR;
+    node [shape=component, style=filled, color=lightblue];
+
+    // Components
+    TestClass1 [label="MySwagLabsTest"];
+    TestClass2 [label="Hooks"];
+    LoginPage [label="LoginPage"];
+    ProductPage [label="ProductPage"];
+    CartPage [label="CartPage"];
+    CheckoutPage [label="CheckoutPage"];
+    DriverManager [label="DriverManager"];
+    Properties [label="Properties"];
+    TestContext [label="TestContext"];
+    AndroidDriver [label="AndroidDriver", shape=ellipse, style=filled, color=lightyellow];
+
+    // Relationships
+    TestClass1 -> LoginPage [label="uses"];
+    TestClass1 -> ProductPage [label="uses"];
+    TestClass1 -> CartPage [label="uses"];
+    TestClass1 -> CheckoutPage [label="uses"];
+    TestClass2 -> TestContext [label="uses"];
+    LoginPage -> AndroidDriver [label="interacts with"];
+    ProductPage -> AndroidDriver [label="interacts with"];
+    CartPage -> AndroidDriver [label="interacts with"];
+    CheckoutPage -> AndroidDriver [label="interacts with"];
+    DriverManager -> AndroidDriver [label="manages"];
+    TestContext -> DriverManager [label="uses"];
+    TestContext -> Properties [label="uses"];
+}
