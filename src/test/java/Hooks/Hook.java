@@ -49,7 +49,7 @@ public class Hook {
         }
     }
 
-    // Method to close the driver
+    // Method to close the 00 driver
     public void closeDriver() {
         if (driver != null) {
             driver.quit();
